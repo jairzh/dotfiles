@@ -1,0 +1,47 @@
+[user]
+    email = iomymei@hotmail.com
+    name = Jair.Zheng
+
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    ui = auto
+
+[gui]
+    recentrepo = /Users/jairzheng/workspace/silverpeakprd
+    recentrepo = /Users/jairzheng/workspace/junobabyprd
+    recentrepo = /Users/jairzheng/workspace/efQA
+[core]
+    excludesfile = ~/.gitignore
+    whitespace = nowarn
+[apply]
+    whitespace = nowarn
+[merge]
+    tool = mydiff
+[mergetool "mydiff"]
+    cmd="/Applications/kdiff3.app/Contents/MacOS/kdiff3 $BASE $LOCAL $REMOTE $MERGED"
+
+[mergetool]
+    keepBackup = false
+
+[diff]
+    tool = mydiff
+    external = mydiff
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow 
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+
