@@ -1,6 +1,6 @@
 [user]
-    email = iomymei@hotmail.com
-    name = Jair.Zheng
+    email = jair.zheng@meginfo.com
+    name = Jair Zheng
 
 [color]
     diff = auto
@@ -16,9 +16,9 @@
     excludesfile = ~/.gitignore
     whitespace = nowarn
 [apply]
-    whitespace = nowarn
+	whitespace = nowarn
 [merge]
-    tool = mydiff
+    #tool = mydiff
 [mergetool "mydiff"]
     cmd="/Applications/kdiff3.app/Contents/MacOS/kdiff3 $BASE $LOCAL $REMOTE $MERGED"
 
@@ -26,8 +26,7 @@
     keepBackup = false
 
 [diff]
-    tool = mydiff
-    external = mydiff
+    tool = vimdiff
 
 [color "branch"]
     current = yellow reverse
