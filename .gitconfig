@@ -13,24 +13,26 @@
     recentrepo = /Users/jairzheng/workspace/junobabyprd
     recentrepo = /Users/jairzheng/workspace/efQA
 [core]
-    excludesfile = ~/.gitignore
+    excludesfile = /Users/jairzheng/.gitignore
     whitespace = nowarn
+    editor = /usr/bin/vim
+    autocrlf = input
 [apply]
-	whitespace = nowarn
+    whitespace = nowarn
 [merge]
     #tool = mydiff
 [mergetool "mydiff"]
-    cmd="/Applications/kdiff3.app/Contents/MacOS/kdiff3 $BASE $LOCAL $REMOTE $MERGED"
+    cmd = /Applications/kdiff3.app/Contents/MacOS/kdiff3 $BASE $LOCAL $REMOTE $MERGED
 
 [mergetool]
     keepBackup = false
 
 [diff]
-    tool = vimdiff
+    tool = opendiff
 
 [color "branch"]
     current = yellow reverse
-    local = yellow 
+    local = yellow
     remote = green
 
 [color "diff"]
@@ -44,3 +46,9 @@
     changed = green
     untracked = cyan
 
+[difftool "sourcetree"]
+    cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+    path = 
+[mergetool "sourcetree"]
+    cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+    trustExitCode = true
