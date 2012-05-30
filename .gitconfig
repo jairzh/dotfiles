@@ -20,15 +20,21 @@
 [apply]
     whitespace = nowarn
 [merge]
-    #tool = mydiff
-[mergetool "mydiff"]
-    cmd = /Applications/kdiff3.app/Contents/MacOS/kdiff3 $BASE $LOCAL $REMOTE $MERGED
-
+    tool = mymerge
+[mergetool "mymerge"]
+    cmd = /Applications/p4merge.app/Contents/MacOS/p4merge  \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+    trustExitCode = false
 [mergetool]
     keepBackup = false
 
 [diff]
-    tool = opendiff
+    tool = mydiff 
+    trustExitCode = false
+[difftool "mydiff"]
+    cmd = /Applications/p4merge.app/Contents/MacOS/p4merge  \"$BASE\" \"$LOCAL\"
+    trustExitCode = false
+[difftool]
+    prompt = false
 
 [color "branch"]
     current = yellow reverse
