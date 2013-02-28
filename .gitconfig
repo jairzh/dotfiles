@@ -8,31 +8,33 @@
     branch = auto
     ui = auto
 
-[gui]
-    recentrepo = /Users/jairzheng/workspace/silverpeakprd
-    recentrepo = /Users/jairzheng/workspace/junobabyprd
-    recentrepo = /Users/jairzheng/workspace/efQA
 [core]
     excludesfile = /Users/jairzheng/.gitignore
     whitespace = nowarn
     editor = /usr/bin/vim
     autocrlf = input
+
 [apply]
     whitespace = nowarn
+
 [merge]
     tool = mymerge
+
 [mergetool "mymerge"]
     cmd = /Applications/p4merge.app/Contents/MacOS/p4merge  \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
     trustExitCode = false
+
 [mergetool]
     keepBackup = false
 
 [diff]
     tool = mydiff 
     trustExitCode = false
+
 [difftool "mydiff"]
     cmd = /Applications/p4merge.app/Contents/MacOS/p4merge  \"$BASE\" \"$LOCAL\"
     trustExitCode = false
+
 [difftool]
     prompt = false
 
@@ -51,10 +53,3 @@
     added = yellow
     changed = green
     untracked = cyan
-
-[difftool "sourcetree"]
-    cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-    path = 
-[mergetool "sourcetree"]
-    cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-    trustExitCode = true
