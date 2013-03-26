@@ -53,3 +53,22 @@
     added = yellow
     changed = green
     untracked = cyan
+
+[difftool "sourcetree"]
+	cmd = /Applications/kdiff3.app/Contents/MacOS/kdiff3 \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/kdiff3.app/Contents/MacOS/kdiff3 \"$BASE\" \"$LOCAL\" \"$REMOTE\" -o \"$MERGED\"
+	trustExitCode = true
+[filter "tabspace"]
+	clean = expand -4 
+
+[push]
+	default = matching
+
+[alias]
+    cmt = commit
+    status = st
+    st = status
+    ck = checkout
+    sfdiff = !sh -c 'git diff --name-only $0 -- $(git ls-files | grep -Ev "^/*.*.xml")'

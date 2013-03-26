@@ -1,0 +1,2 @@
+let NERDTreeQuitOnOpen = 0
+set nospell

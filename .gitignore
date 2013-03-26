@@ -1,5 +1,13 @@
+.tags
+.tags_sorted_by_file
 *.swp
 .DS_Store
 build/
 deploy.zip
-
+*.sublime*
+!*.sublime-*
+*.sublime-workspace
+*.sublime-project
+config/objects/
+config/settings.yaml
+config/.session
